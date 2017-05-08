@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  phantomjs:
+    image: wernight/phantomjs
+    command: phantomjs -w
+
+  web_scraper:
+    build: .
+    links:
+      - phantomjs
